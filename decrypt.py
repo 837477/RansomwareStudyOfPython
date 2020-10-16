@@ -45,13 +45,14 @@ def Search(dirname):
             if Target(Extension) == False:
                 Decoding(full_filename)
 
-KEY = input("Input the Key:")
+if __name__ == "__main__":
+    KEY = input("Input the Key:")
 
-desktopPath = os.path.expanduser('~')
-target_local = desktopPath + '\\desktop'
+    desktopPath = os.path.expanduser('~')
+    target_local = desktopPath + '\\desktop'
 
-KEY_HASH = '0ebdb7f9b238c2fd40f922099b7d65f24ffa3f084deccf0ea40f658e09b2a1ec'
-TEMP_HASH = hashlib.sha256(KEY.encode()).hexdigest()
+    KEY_HASH = '0ebdb7f9b238c2fd40f922099b7d65f24ffa3f084deccf0ea40f658e09b2a1ec'
+    TEMP_HASH = hashlib.sha256(KEY.encode()).hexdigest()
 
-if KEY_HASH == TEMP_HASH:
-    Search(target_local)
+    if KEY_HASH == TEMP_HASH:
+        Search(target_local)
