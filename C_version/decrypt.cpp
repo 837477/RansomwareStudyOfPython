@@ -123,9 +123,9 @@ int FileSearch(char *file_path)
 int main()
 {
 	FILE *KEY;
-	char file_path[_MAX_PATH] = "C:\\test";
+	char file_path[_MAX_PATH] = "<Target_Path>";
 
-	KEY = fopen("C:\\test1\\KEY.MJ", "rb");
+	KEY = fopen("<Target_Path>\\KEY.MJ", "rb");
 	if (KEY == NULL)
 	{
 		printf("복호화키를 찾을 수 없습니다.\n");
@@ -137,7 +137,7 @@ int main()
 
 	FileSearch(file_path);
 
-	remove("C:\\test\\KEY");
+	remove("<Target_Path>\\KEY");
 
 	getchar();
 
